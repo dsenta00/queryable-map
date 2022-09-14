@@ -4,16 +4,17 @@ import dsenta.queryablemap.statistics.TreeStatisticsByTreeName
 import dsenta.queryablemap.trie.Trie
 import dsenta.queryablemap.wgb.WhiteGreyBlackTree
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource
 import java.time.Instant
 
-
 internal class QueryableMapTest {
 
     @ParameterizedTest
     @MethodSource("outputResult_source")
+    @Disabled
     fun outputResult(tree: QueryableMap<String, String>) {
         TreeStatisticsByTreeName().set(1_000_000).calculateTree(tree)
     }
@@ -29,6 +30,7 @@ internal class QueryableMapTest {
     }
 
     @Test
+    @Disabled
     fun trieFasterToFetchThanWgbTrie() {
         // Given
         val trie = Trie<String, String>()

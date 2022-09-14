@@ -3,6 +3,7 @@ package dsenta.queryablemap.wgb
 import dsenta.queryablemap.testutil.RandomGenerator
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
@@ -13,6 +14,7 @@ internal class WhiteGreyBlackTreeTest {
 
     @ParameterizedTest
     @ValueSource(ints = [100, 1_000, 100_000, 1_000_000, 5_000_000])
+    @Disabled
     fun testTree(numbers: Int) {
         val tree = WhiteGreyBlackTree<Int, Int>()
         val rand = RandomGenerator.streamRandomNumbers(numbers).collect(Collectors.toList())
