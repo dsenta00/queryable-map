@@ -46,10 +46,8 @@ import dsenta.queryablemap.wgb.node.model.WgbKey;
 import dsenta.queryablemap.wgb.node.model.WhiteNode;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@Slf4j
 public final class GreyNodeHandler {
 
     private static final int MAX_NO_OF_ROTATIONS = 10;
