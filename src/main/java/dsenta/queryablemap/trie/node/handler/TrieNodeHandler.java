@@ -38,10 +38,9 @@ import java.util.Stack;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 
-import org.springframework.util.StringUtils;
-
 import dsenta.queryablemap.trie.node.model.Pair;
 import dsenta.queryablemap.trie.node.model.TrieNode;
+import dsenta.queryablemap.wgb.node.util.StringUtils;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -542,7 +541,7 @@ public final class TrieNodeHandler {
         var nodeStack = new Stack<Pair<Character, TrieNode<K, T>>>();
         var theOneToDelete = root;
 
-        if (!StringUtils.isEmpty(key)) {
+        if (!StringUtils.isEmpty(keyStr)) {
             var current = root;
 
             for (char c : keyStr.toCharArray()) {
