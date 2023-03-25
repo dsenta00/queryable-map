@@ -13,7 +13,7 @@
 
 	<groupId>dsenta</groupId>
 	<artifactId>queryable-map</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 	<name>queryable-map</name>
 	<description>Queryable tree collection library for Spring Boot</description>
 

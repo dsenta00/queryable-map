@@ -555,6 +555,10 @@ public final class TrieNodeHandler {
             }
         }
 
+        if (isNull(theOneToDelete)) {
+            return null;
+        }
+
         if (!theOneToDelete.hasNext()) {
             while (!nodeStack.isEmpty()) {
                 var characterToNode = nodeStack.pop();

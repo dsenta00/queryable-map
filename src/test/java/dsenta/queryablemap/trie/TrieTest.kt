@@ -67,6 +67,32 @@ internal class TrieTest {
     }
 
     @Test
+    fun deleteEmpty() {
+        // Given
+        val trie = Trie<String, String>()
+
+        // When
+        val removed = trie.remove("junit2")
+
+        // Then
+        assertThat(removed).isNull();
+        assertThat(trie).isEmpty()
+    }
+
+    @Test
+    fun deleteEmptyNull() {
+        // Given
+        val trie = Trie<String, String>()
+
+        // When
+        val removed = trie.remove(null)
+
+        // Then
+        assertThat(removed).isNull();
+        assertThat(trie).isEmpty()
+    }
+
+    @Test
     fun clear() {
         // Given
         val trie = Trie<String, String>()
